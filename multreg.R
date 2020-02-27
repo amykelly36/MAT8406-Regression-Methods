@@ -37,6 +37,12 @@ reg4.out <- lm(flowers~intensity+timing)     # Fits first-order model
 summary(reg4.out)                            # Regression summary
 anova(reg4.out)                              # Regression ANOVA table
 
+timing1<-factor(timing, levels=c("At PFI", 
+                                 "24 Days before PFI")) # Modify level orders
+reg5.out <- lm(flowers~intensity+timing1)               # Change baseline category
+summary(reg5.out)                            
+
+
 # Alternative way to fit the interaction model
 # ============================================
 reg3b.out <- lm(flowers~intensity*timing)  # Fits interaction model
