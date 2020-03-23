@@ -16,7 +16,7 @@ pairs.panels(sat2[,2:8],labels=lab)
 # ===========================================
 n <- dim(sat2)[1]          # Computes sample size
 library(MPV)               # Loads MPV library for PRESS function
-# Install.packages("leaps")
+# install.packages("leaps")
 library(leaps)             # Loads leaps library for leaps function
 
 sat2 <- data.frame(sat[,1:2],logtak=log(sat[,3]),sat[,4:8])
